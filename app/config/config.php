@@ -10,4 +10,4 @@
     // URL Root
     define('URLROOT', 'http://localhost/shareposts');
     // Site Root
-    define('SITEROOT', 'ShaqranMVC');
+    define('SITEROOT', 'Shareposts');
