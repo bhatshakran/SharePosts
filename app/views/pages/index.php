@@ -1,7 +1,18 @@
 <?php require APPROOT . '/views/inc/header.php';?>
-<h1>
-    <?php
+<div class="jumbotron jumbotron-flud p-5 bg-light border rounded-3">
+<div class="container">
+<div class="display-3">
+<?php
 echo $data['title'];
 ?>
-</h1>
+</div>
+<p class="lead">
+<?php
+echo $data['description'];
+?>
+</p>
+</div>
+
+</div>
+
 <?php require APPROOT . '/views/inc/footer.php';?>

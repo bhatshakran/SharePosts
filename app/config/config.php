@@ -11,3 +11,5 @@
     define('URLROOT', 'http://localhost/shareposts');
     // Site Root
     define('SITEROOT', 'Shareposts');
+    // APP Version
+    define('APPVERSION', '1.0.0');
