@@ -6,6 +6,7 @@
             }
 
             $this->postModel = $this->model('Post');
+            $this->userModel = $this->model('User');
         }
 
 
@@ -58,13 +59,30 @@
                   $this->view('posts/add', $data);
                 }
         
-              }else{
-            $data = [
-                'title' => '',
-                'body' => ''
-            ];
+              } else{
+                $data = [
+                    'title' => '',
+                    'body' => ''
+                ];
 
-            $this->view('posts/add', $data);
+                 $this->view('posts/add', $data);
         }
+
     }
+     // Show post method
+     public function show($id) {
+        //  Get the post model and user model
+        $post = $this->postModel->getPostById($id);
+        $user = $this->userModel->getUserById($post->user_id);
+
+
+        $data = [
+            'post' => $post,
+            'user' => $user
+        ];
+
+        $this->view('posts/show', $data);
     }
+        
+    }
+    
